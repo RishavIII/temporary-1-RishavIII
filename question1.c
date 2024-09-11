@@ -5,6 +5,10 @@ int main() {
     int n;
     printf("Enter the number of elements: ");
     scanf("%d", &n);
+    if (n <= 0) {
+        printf("Enter an integer greater than 0");
+        return 1;
+    }
     int *arr = (int *)malloc(n * sizeof(int));
     if (arr == NULL) {
         printf("Memory allocation failed\n");
